@@ -21,4 +21,9 @@ public class OnlyOneSubtractionRule implements IRule {
 
 		return true;
 	}
+
+	@Override
+	public String getName() {
+		return "OnlyOneSubtractionRule";
+	}
 }

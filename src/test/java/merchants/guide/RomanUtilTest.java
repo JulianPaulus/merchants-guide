@@ -22,7 +22,9 @@ public class RomanUtilTest {
 	@ParameterizedTest
 	@MethodSource("testCases")
 	void romanToDecimalTest(final String input, final int expected) {
-		assertEquals(expected, RomanUtil.romanToDecimal(input));
+		final RomanToDecimalConverter converter = new RomanToDecimalConverter(RulesFactory.getRules());
+
+		assertEquals(expected, converter.convert(input));
 	}
 
 }
