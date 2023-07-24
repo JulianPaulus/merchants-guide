@@ -17,7 +17,8 @@ public class RepeatMaxNTimesRuleTest {
 			Arguments.of("XXXIX", RomanNumeral.X, 3, true),
 			Arguments.of("XXXXIX", RomanNumeral.X, 3, false),
 			Arguments.of("XXXXIX", RomanNumeral.I, 3, true),
-			Arguments.of("XXXXIX", RomanNumeral.X, 4, true)
+			Arguments.of("XXXXIX", RomanNumeral.X, 4, true),
+			Arguments.of("", RomanNumeral.X, 4, true)
 		);
 	}
 	@ParameterizedTest

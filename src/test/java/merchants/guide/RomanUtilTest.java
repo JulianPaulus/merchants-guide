@@ -15,7 +15,8 @@ public class RomanUtilTest {
 			Arguments.of("MCMIII", 1903), // spec test
 			Arguments.of("mcmiii", 1903), // lowercase test
 			Arguments.of("IX", 9),
-			Arguments.of("MCMXLIV", 1944)
+			Arguments.of("MCMXLIV", 1944),
+			Arguments.of("MMVI", 2006)
 		);
 	}
 	@ParameterizedTest
