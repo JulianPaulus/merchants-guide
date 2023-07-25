@@ -66,8 +66,6 @@ appropriately.
 > I have no idea what you are talking about\
 
 ## Implementation
-![Coverage](.github/badges/jacoco.svg)
-
 The problem is implemented using Java and built with gradle.\
 You should at least use Java 11 to build this.
 
