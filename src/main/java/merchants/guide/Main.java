@@ -1,17 +1,9 @@
 package merchants.guide;
 
 import merchants.guide.parsing.StatementFactory;
-import merchants.guide.parsing.statements.AliasStatement;
-import merchants.guide.parsing.statements.ConversionQuestionStatement;
-import merchants.guide.parsing.statements.ConversionStatement;
-import merchants.guide.parsing.statements.IStatement;
 import merchants.guide.parsing.ParsingRegistry;
-import merchants.guide.parsing.statements.QuestionStatement;
 import merchants.guide.parsing.StatementParser;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
 
 public class Main {
 

@@ -5,8 +5,6 @@ import merchants.guide.RulesFactory;
 import merchants.guide.parsing.AliasMapper;
 import merchants.guide.parsing.ParsingRegistry;
 import merchants.guide.parsing.StatementParsingException;
-import merchants.guide.parsing.Unit;
-import merchants.guide.parsing.UnitConverter;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
