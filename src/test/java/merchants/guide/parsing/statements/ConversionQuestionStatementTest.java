@@ -74,9 +74,9 @@ public class ConversionQuestionStatementTest {
 
 		final StatementParsingException exception = assertThrows(
 			StatementParsingException.class,
-			() -> statement.parse(parsingRegistry, "how many Credits is glob prok Silver ?")
+			() -> statement.parse(parsingRegistry, "how many Credits is glob prok Gold ?")
 		);
-		assertTrue(exception.getMessage().contains(Unit.SILVER.toString()));
+		assertTrue(exception.getMessage().contains(Unit.GOLD.toString()));
 	}
 
 }

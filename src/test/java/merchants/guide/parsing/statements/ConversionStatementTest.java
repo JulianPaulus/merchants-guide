@@ -45,11 +45,11 @@ public class ConversionStatementTest {
 		final ParsingRegistry parsingRegistry = new ParsingRegistry(new RomanToDecimalConverter(RulesFactory.getRules()));
 		parsingRegistry.registerAliasMapper(new AliasMapper("glob", "X"));
 
-		statement.parse(parsingRegistry, "glob glob Silver is 40 Credits");
+		statement.parse(parsingRegistry, "glob glob Iron is 40 Credits");
 
 		assertEquals(1, parsingRegistry.getUnitConverters().size());
 
-		final UnitConverter result = parsingRegistry.getUnitConverters().get(Unit.SILVER);
+		final UnitConverter result = parsingRegistry.getUnitConverters().get(Unit.IRON);
 		assertNotNull(result);
 		assertEquals(20, result.convert(10));
 	}

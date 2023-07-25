@@ -4,7 +4,6 @@ public enum Unit {
 
 	GOLD,
 	SILVER,
-	CREDITS,
 	IRON;
 
 }
