@@ -14,7 +14,7 @@ public class SubtractionRule implements IRule {
 
 	public SubtractionRule(final RomanNumeral subtrahend, final Set<RomanNumeral> minuends) {
 		testStrings = Arrays.stream(RomanNumeral.values())
-			.filter(numeral -> !minuends.contains(numeral) && numeral != subtrahend)
+			.filter(numeral -> !minuends.contains(numeral) && subtrahend.smallerThan(numeral))
 			.map(minuend -> subtrahend.toString() + minuend.toString())
 			.collect(Collectors.toSet());
 

@@ -22,7 +22,8 @@ public class SubtractionRuleTest {
 			Arguments.of("XD", RomanNumeral.X, new HashSet<>(Arrays.asList(RomanNumeral.L, RomanNumeral.C)), false),
 			Arguments.of("VX", RomanNumeral.X, new HashSet<>(Arrays.asList(RomanNumeral.L, RomanNumeral.C)), true),
 			Arguments.of("", RomanNumeral.X, new HashSet<>(Arrays.asList(RomanNumeral.L, RomanNumeral.C)), true),
-			Arguments.of("MCMIII", RomanNumeral.I, new HashSet<>(Arrays.asList(RomanNumeral.V, RomanNumeral.X)), true)
+			Arguments.of("MCMIII", RomanNumeral.I, new HashSet<>(Arrays.asList(RomanNumeral.V, RomanNumeral.X)), true),
+			Arguments.of("XI", RomanNumeral.X, new HashSet<>(Arrays.asList(RomanNumeral.L, RomanNumeral.C)), true)
 		);
 	}
 	@ParameterizedTest
