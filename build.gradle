@@ -25,3 +25,9 @@ test {
 
     finalizedBy jacocoTestReport
 }
+
+jacocoTestReport {
+    reports {
+        csv.required = true
+    }
+}
