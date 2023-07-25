@@ -66,6 +66,8 @@ appropriately.
 > I have no idea what you are talking about\
 
 ## Implementation
+![Coverage](.github/badges/jacoco.svg)
+
 The problem is implemented using Java and built with gradle.\
 You should at least use Java 11 to build this.
 
@@ -92,3 +94,4 @@ Some of those are (but not limited to):
 There are only test cases for alien -> human, but not the other way around.
 Is this program supposed to be bidirectional? 
 This implementation assumes that this program should only cover the given test cases.
+- Does this application require localization?
