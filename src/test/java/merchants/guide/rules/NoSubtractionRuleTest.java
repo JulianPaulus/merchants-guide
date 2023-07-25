@@ -18,6 +18,7 @@ public class NoSubtractionRuleTest {
 		return Stream.of(
 			Arguments.of("VX", RomanNumeral.V, false),
 			Arguments.of("XV", RomanNumeral.V, true),
+			Arguments.of("XI", RomanNumeral.X, true),
 			Arguments.of("MCMXLIV", RomanNumeral.V, true)
 		);
 	}
