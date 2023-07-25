@@ -19,12 +19,7 @@ public class RomanToDecimalConverter {
 
 	private int romanToDecimal(final String romanNumber) {
 
-		Set<IRule> failedRules = rules.stream().filter(rule -> !rule.check(romanNumber)).collect(Collectors.toSet());
-		if (!failedRules.isEmpty()) {
-			StringBuilder builder = new StringBuilder("provided roman number fails to match rules: ");
-			failedRules.forEach(rule -> builder.append(rule.getName()).append(" "));
-			throw new IllegalArgumentException(builder.toString());
-		}
+		validate(romanNumber);
 
 		int sum = 0;
 		for (int i = 0; i < romanNumber.length(); i++) {
@@ -45,6 +40,15 @@ public class RomanToDecimalConverter {
 		}
 
 		return sum;
+	}
+
+	private void validate(final String romanNumber) {
+		final Set<IRule> failedRules = rules.stream().filter(rule -> !rule.check(romanNumber)).collect(Collectors.toSet());
+		if (!failedRules.isEmpty()) {
+			final StringBuilder builder = new StringBuilder("provided roman number fails to match rules: ");
+			failedRules.forEach(rule -> builder.append(rule.getName()).append(" "));
+			throw new IllegalArgumentException(builder.toString());
+		}
 	}
 
 }

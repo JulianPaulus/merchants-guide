@@ -1,14 +1,22 @@
 package merchants.guide;
 
+import merchants.guide.rules.IRule;
+import merchants.guide.rules.MaxCountRule;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public class RomanUtilTest {
+public class RomanToDecimalConverterTest {
 
 	private static Stream<Arguments> testCases() {
 		return Stream.of(
@@ -25,6 +33,18 @@ public class RomanUtilTest {
 		final RomanToDecimalConverter converter = new RomanToDecimalConverter(RulesFactory.getRules());
 
 		assertEquals(expected, converter.convert(input));
+	}
+
+	@Test
+	void shouldValidateRules() {
+		final Set<IRule> rules = new HashSet<>(List.of(new MaxCountRule(RomanNumeral.I, 3)));
+
+		final RomanToDecimalConverter converter = new RomanToDecimalConverter(rules);
+
+		assertThrows(
+			IllegalArgumentException.class,
+			() -> converter.convert("IIII")
+		);
 	}
 
 }
