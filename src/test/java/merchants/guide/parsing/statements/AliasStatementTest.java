@@ -44,7 +44,7 @@ public class AliasStatementTest {
 		assertEquals(1, parsingRegistry.getAliasMappers().size());
 
 		final AliasMapper result = parsingRegistry.getAliasMappers().stream().findFirst().get();
-		assertEquals("glob", result.getFrom());
+		assertEquals("\\Qglob\\E", result.getFrom());
 		assertEquals("X", result.getTo());
 	}
 

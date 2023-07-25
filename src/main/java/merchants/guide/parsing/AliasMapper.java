@@ -1,12 +1,14 @@
 package merchants.guide.parsing;
 
+import java.util.regex.Pattern;
+
 public class AliasMapper {
 
 	private final String from;
 	private final String to;
 
 	public AliasMapper(final String from, final String to) {
-		this.from = from;
+		this.from = Pattern.quote(from);
 		this.to = to;
 	}
 
